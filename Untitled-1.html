@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19.09.2022</title>
+    <style>
+        .casa{
+            width: 110px;
+            height: 110px;
+            position: relative;
+            font-size: xx-large;
+        }
+        .casa:hover {
+            top: -2px;
+            box-shadow: 0 2px 2px rgb(0, 0, 0)
+        }
+    </style>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="text-center text-success">
+                    Velha de cria
+                </h3>
+                <div class="row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-4">
+                        <table class="table">
+                            <tbody style="text-align: center;" >
+                                <tr class="table-success">
+                                    <td>
+                                        <button id="00" onclick="f00()" class="casa"></button>
+                                    </td>
+                                    <td>
+                                        <button id="01" onclick="f01()" class="casa"></button>
+                                    </td>
+                                    <td>
+                                        <button id="02" onclick="f02()" class="casa"></button>
+                                    </td>
+                                </tr>
+                                <tr class="table-success">
+                                    <td>
+                                        <button id="10" onclick="f10()" class="casa"></button>
+                                    </td>
+                                    <td>
+                                        <button id="11" onclick="f11()" class="casa"></button>
+                                    </td>
+                                    <td>
+                                        <button id="12" onclick="f12()" class="casa"></button>
+                                    </td>
+                                </tr>
+                                <tr class="table-success">
+                                    <td>
+                                        <button id="20" onclick="f20()" class="casa"></button>
+                                    </td>
+                                    <td>
+                                        <button id="21" onclick="f21()" class="casa"></button>
+                                    </td>
+                                    <td>
+                                        <button id="22" onclick="f22()" class="casa"></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let ultima = "X"
+    let velha = [3]
+    velha  [0] = [3]
+    velha  [1] = [3]
+    velha  [2] = [3]
+    function verifica() {
+         if(ultima == "X"){
+            ultima = "O"
+        }
+        else {
+            ultima = "X"
+        }
+
+    }
+    function f00() {                                                                                                                                                                                                                   
+        verifica()
+        velha [0][0] = ultima
+        document.getElementById("00").innerHTML = ultima
+        document.getElementById("00").disabled = true;
+    }
+    function f01(){
+        verifica()
+        velha [0][1] = ultima
+        document.getElementById("01").innerHTML = ultima
+        document.getElementById("01").disabled = true;
+    }
+    function f02(){
+        verifica()
+        velha [0][2] = ultima
+        document.getElementById("02").innerHTML = ultima
+        document.getElementById("02").disabled = true;
+    }
+    function f10(){
+        verifica()
+        velha [1][0] = ultima
+        document.getElementById("10").innerHTML = ultima
+        document.getElementById("10").disabled = true;
+    }
+    function f11(){
+        verifica()
+        velha [1][1] = ultima
+        document.getElementById("11").innerHTML = ultima
+        document.getElementById("11").disabled = true;
+    }
+    function f12(){
+        verifica()
+        velha [1][2] = ultima
+        document.getElementById("12").innerHTML = ultima
+        document.getElementById("12").disabled = true;
+    }
+    function f20(){
+        verifica()
+        velha [2][0] = ultima
+        document.getElementById("20").innerHTML = ultima
+        document.getElementById("20").disabled = true;
+    }
+    function f21(){
+        verifica()
+        velha [2][1] = ultima
+        document.getElementById("21").innerHTML = ultima
+        document.getElementById("21").disabled = true;
+    }
+    function f22(){
+        verifica()
+        velha [2][2] = ultima
+        document.getElementById("22").innerHTML = ultima
+        document.getElementById("22").disabled = true;
+    }
+</script>
